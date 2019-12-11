@@ -48,6 +48,8 @@ table {
 	border-spacing: 0;
 }
 
+/* General Styles */
+
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
@@ -57,3 +59,69 @@ html, body {
     height: 100%;
 }
 
+html {
+	font-size: 62.5%
+}
+
+.container {
+	max-width: 880px;
+	margin: 0 auto;
+	font-size: 1.6rem
+}
+
+/* Variables */
+@h3-font-size: 1.8rem;
+
+/* Variables */
+.my-hover-mixin() {
+	&:hover {
+	  border: 1px solid black;
+		}
+  }
+
+/* Main Content */
+.main-content{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+	margin: 2% 2%;
+	padding: 2%;
+	font-size: 1.4rem;
+	width: 100%;
+
+		.top-content{
+			display: flex;
+			flex-direction: column;
+			align-items: baseline;
+			background-color: lightgray;
+
+			img {
+				margin: 7% 3%;
+			}
+
+			h1 {
+				font-size: 3.4rem;
+				margin: 2% 3%;
+			}
+
+			h3 {
+				font-size: @h3-font-size;
+				margin: 2% 3% 1% 3%;
+			}
+
+			p {
+				margin: 1% 3%;
+			}
+
+			button {
+				margin: 2% 3%;
+				padding: 1%;
+				width: 15%;
+				color: white;
+				background-color: gray;
+				.my-hover-mixin();
+			}
+		}
+}
